@@ -1,0 +1,32 @@
+Package: ConcominantDrugFeasibility
+Type: Package
+Title: Feasibility of Concomitant Drug Analysis in Prostate Cancer Patients
+Version: 0.1.0
+Authors@R: person("Andrei", "Kiselev", email = "kiselev.eco@gmail.com", role = c("aut", "cre"))
+Description: Assesses, in an OMOP CDM database, how many patients of a prostate
+    cancer cohort (PCa ARPI) also have a concomitant drug cohort entry (losartan,
+    amlodipine, nifedipine, apixaban, warfarin, atorvastatin, simvastatin). Reports
+    the overlap of each drug cohort with the prostate cancer cohort, the
+    difference between the drug and prostate cancer cohort index dates in
+    10-day bins, and one plot of these bins per drug. Designed for federated
+    network use with small cell count censoring.
+License: Apache License 2.0
+Encoding: UTF-8
+LazyData: true
+Depends:
+    R (>= 4.3.0)
+Imports:
+    CirceR,
+    CohortGenerator (>= 1.1.0),
+    DatabaseConnector (>= 7.1.0),
+    ParallelLogger (>= 3.3.0),
+    SqlRender (>= 1.19.4),
+    checkmate (>= 2.3.4),
+    ggplot2 (>= 3.5.0),
+    readr (>= 2.2.0),
+    utils,
+    zip
+Suggests:
+    DBI,
+    duckdb
+Config/roxygen2/version: 8.1.0
